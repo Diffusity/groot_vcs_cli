@@ -3,7 +3,7 @@
 ### _Groot-Cli : A simple version control system built by learning and executing the knowledge gained by using and learing about GIT._
 
 
-- This is a doucumentation regarding the usuage , working and purpose of the groot-version control system which is mainly made using the python programming language.
+- This is a documentation regarding the usuage , working and purpose of the groot-version control system which is mainly made using the python programming language.
 - You ask why python ? Then,I might say that it's my personal prefrence.But,no the main reason to develop it by using _python_ is mainly because of the library support for the _python_.
 - Now , lets talk about the _libraries_ you might need to install before getting started.
   - [setuptools] - mainly used to make a package named groot which will work in your Cli.
