@@ -37,11 +37,9 @@ def upload_directory_to_firebase(name,local_path, bucket_path=""):
         for file in files:
             local_file_path = os.path.join(root, file)
             firebase_storage_path =f'{name} / ' + os.path.join(bucket_path, rel_path, file).replace("\\", "/")
-            print(firebase_storage_path)
             # Upload the file
             blob = bucket.blob(firebase_storage_path)
             blob.upload_from_filename(local_file_path)
-            print(f'File {local_file_path} uploaded to {firebase_storage_path}.')
 
 
 def delete_directory(name,directory_name):
@@ -60,8 +58,7 @@ def delete_directory(name,directory_name):
         # Delete each blob
         for blob in blobs:
             blob.delete()
-            print(f"Deleted {blob.name}")
         
-        print(f"Directory {directory_path} deleted successfully.")
+        print(f"Directory {directory_path} pushed successfully.")
     except Exception as e:
         print(f"An error occurred: {e}")
