@@ -109,6 +109,11 @@ def commit(args):
     check_user()
     print(base.commit(args.message))
 
+def _print_commit(oid, commit, refs=None):
+    refs_str = f' ({", ".join(refs)})' if refs else ''
+    print(f'commit : {oid} : {refs_str}')
+    print("Message: ", commit.message)
+    print('')
 
 def log(args):
     check_user()
